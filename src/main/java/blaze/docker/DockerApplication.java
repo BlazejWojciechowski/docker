@@ -11,12 +11,10 @@ import org.springframework.web.bind.annotation.RestController;
 public class DockerApplication {
     @Value("${user}")
     private String user;
-
     @GetMapping("/")
     public String get() {
         return "Hello! " + user;
     }
-
     public static void main(String[] args) {
         SpringApplication.run(DockerApplication.class, args);
     }
